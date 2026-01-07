@@ -1,0 +1,104 @@
+.hero {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.overlayColor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* Slight darken for text readability */
+}
+
+.content {
+    text-align: center;
+    color: var(--white);
+    /* Text on image should be light */
+    z-index: 10;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+    font-style: italic;
+    color: #fff;
+    /* Keep it white or subtle gold? White reads better on hero */
+}
+
+.subtitle {
+    font-family: var(--font-lato);
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.ctaButton {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--white);
+    /* Contrast on buttons */
+    padding: 1rem 2.5rem;
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent);
+}
+
+.ctaButton:hover {
+    background-color: transparent;
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(193, 154, 107, 0.4);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}
