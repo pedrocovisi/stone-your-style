@@ -1,11 +1,16 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
         <nav className={styles.navbar}>
@@ -13,9 +18,14 @@ export default function Navbar() {
                 <div className={styles.logo}>
                     <Link href="/">Stone Your Style</Link>
                 </div>
-                <ul className={styles.navLinks}>
+
+                <ul className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`}>
                     <li>
-                        <Link href="/" className={pathname === '/' ? styles.active : ''}>
+                        <Link
+                            href="/"
+                            className={pathname === '/' ? styles.active : ''}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
                             Início
                         </Link>
                     </li>
@@ -23,6 +33,7 @@ export default function Navbar() {
                         <Link
                             href="/monte-sua-peca"
                             className={pathname === '/monte-sua-peca' ? styles.active : ''}
+                            onClick={() => setIsMenuOpen(false)}
                         >
                             Monte sua peça
                         </Link>
@@ -31,6 +42,7 @@ export default function Navbar() {
                         <Link
                             href="/about"
                             className={pathname === '/about' ? styles.active : ''}
+                            onClick={() => setIsMenuOpen(false)}
                         >
                             Sobre
                         </Link>
@@ -39,13 +51,18 @@ export default function Navbar() {
                         <Link
                             href="/contact"
                             className={pathname === '/contact' ? styles.active : ''}
+                            onClick={() => setIsMenuOpen(false)}
                         >
                             Contato
                         </Link>
                     </li>
                 </ul>
+
                 <div className={styles.actions}>
                     <button className={styles.cartButton}>Sacola (0)</button>
+                    <button className={styles.menuButton} onClick={toggleMenu}>
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
                 </div>
             </div>
         </nav>

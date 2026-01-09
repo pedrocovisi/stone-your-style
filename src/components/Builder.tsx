@@ -118,7 +118,7 @@ export default function Builder() {
                             checked={selections.wire === 'Aço'}
                             onChange={() => updateSelection('wire', 'Aço')}
                         />
-                        Aço (Mais estruturado)
+                        Aço
                     </label>
                     <label className={styles.radioLabel}>
                         <input
@@ -128,7 +128,7 @@ export default function Builder() {
                             checked={selections.wire === 'Elástico'}
                             onChange={() => updateSelection('wire', 'Elástico')}
                         />
-                        Elástico (Mais prático)
+                        Elástico
                     </label>
                 </div>
             )}

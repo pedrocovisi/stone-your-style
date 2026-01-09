@@ -56,6 +56,7 @@
 .actions {
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
 .cartButton {
@@ -72,4 +73,52 @@
 .cartButton:hover {
     background-color: var(--foreground);
     color: var(--background);
+}
+
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--foreground);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .menuButton {
+        display: block;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navLinks {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 2rem;
+        background-color: rgba(242, 230, 210, 0.98);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-bottom: 2px solid var(--accent);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navLinks.open {
+        display: flex;
+    }
+
+    .navLinks a {
+        font-size: 1.2rem;
+    }
+
+    .actions {
+        order: 2;
+    }
 }

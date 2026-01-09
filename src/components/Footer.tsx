@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -6,13 +7,13 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.column}>
-                    <h3 className={styles.logo}>Stone Your Style</h3>
+                    <h3 className={styles.logo}>STONE YOUR STYLE</h3>
                     <p className={styles.text}>
                         Acessórios autênticos que realçam sua beleza natural com a energia das pedras.
                     </p>
                 </div>
 
-                <div className={styles.column}>
+                {/* <div className={styles.column}>
                     <h4 className={styles.heading}>Links Úteis</h4>
                     <ul className={styles.links}>
                         <li><Link href="/">Início</Link></li>
@@ -20,16 +21,29 @@ export default function Footer() {
                         <li><Link href="/about">Sobre Nós</Link></li>
                         <li><Link href="/faq">Perguntas Frequentes</Link></li>
                     </ul>
-                </div>
+                </div> */}
 
                 <div className={styles.column}>
                     <h4 className={styles.heading}>Contato</h4>
-                    <p className={styles.text}>contato@stoneyourstyle.com</p>
-                    <p className={styles.text}>+55 11 99999-9999</p>
                     <div className={styles.socials}>
-                        {/* Social Icons would go here */}
-                        <span>Instagram</span>
-                        <span>Facebook</span>
+                        <a
+                            href="https://www.instagram.com/stoneyourstyle/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.socialButton}
+                        >
+                            <FaInstagram size={20} />
+                            <span>Instagram</span>
+                        </a>
+                        <a
+                            href="https://wa.me/5519991188733"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.socialButton}
+                        >
+                            <FaWhatsapp size={20} />
+                            <span>WhatsApp</span>
+                        </a>
                     </div>
                 </div>
             </div>

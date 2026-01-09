@@ -55,9 +55,24 @@
 }
 
 .socials {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+.socialButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--background);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.socialButton:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
 }
 
 .bottom {
