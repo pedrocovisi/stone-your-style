@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import hero1 from '../assets/hero1.png';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -7,11 +8,12 @@ export default function Hero() {
         <section className={styles.hero}>
             <div className={styles.imageOverlay}>
                 <Image
-                    src="/images/hero1.png"
+                    src={hero1}
                     alt="Natural Stone Jewelry"
                     fill
                     priority
                     style={{ objectFit: 'cover' }}
+                    placeholder="blur"
                 />
                 <div className={styles.overlayColor}></div>
             </div>
