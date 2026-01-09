@@ -43,8 +43,14 @@
     transition: color 0.2s ease;
 }
 
-.navLinks a:hover {
+.navLinks a:hover,
+.navLinks a.active {
     color: var(--accent);
+}
+
+.navLinks a.active {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
 }
 
 .actions {
