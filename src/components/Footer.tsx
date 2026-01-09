@@ -16,7 +16,7 @@ export default function Footer() {
                     <h4 className={styles.heading}>Links Úteis</h4>
                     <ul className={styles.links}>
                         <li><Link href="/">Início</Link></li>
-                        <li><Link href="/shop">Loja</Link></li>
+                        <li><Link href="/monte-sua-peca">Monte sua peça</Link></li>
                         <li><Link href="/about">Sobre Nós</Link></li>
                         <li><Link href="/faq">Perguntas Frequentes</Link></li>
                     </ul>

@@ -19,7 +19,7 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: "Stone Your Style | Acessórios Naturais",
-  description: "Loja de acessórios com pedras naturais.",
+  description: "Crie acessórios únicos e autênticos com pedras naturais.",
 };
 
 export default function RootLayout({

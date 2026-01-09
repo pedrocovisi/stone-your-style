@@ -20,8 +20,8 @@ export default function Hero() {
                 <p className={styles.subtitle}>
                     Descubra a energia e a beleza das pedras naturais em peças exclusivas.
                 </p>
-                <Link href="/shop" className={styles.ctaButton}>
-                    Explorar Coleção
+                <Link href="/monte-sua-peca" className={styles.ctaButton}>
+                    Monte sua peça personalizada
                 </Link>
             </div>
         </section>

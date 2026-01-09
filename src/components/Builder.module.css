@@ -1,0 +1,181 @@
+.container {
+    min-height: 80vh;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: var(--font-lato);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 2.5rem;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+}
+
+.priceTag {
+    font-size: 1.5rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+}
+
+.stepContainer {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.stepTitle {
+    font-family: var(--font-playfair);
+    font-size: 1.8rem;
+    color: var(--foreground);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 0.5rem;
+}
+
+.gridOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.optionCard {
+    border: 1px solid var(--secondary);
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: transparent;
+    border-radius: 4px;
+}
+
+.optionCard:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.selected {
+    border-color: var(--accent);
+    background-color: rgba(193, 154, 107, 0.1);
+    box-shadow: 0 0 0 1px var(--accent);
+}
+
+.cardTitle {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.cardPrice {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-top: 0.3rem;
+}
+
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.inputField {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-lato);
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.navButton {
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.backButton {
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--foreground);
+}
+
+.backButton:hover {
+    border-color: var(--foreground);
+}
+
+.nextButton {
+    background-color: var(--accent);
+    color: var(--white);
+    border: 1px solid var(--accent);
+}
+
+.nextButton:hover {
+    background-color: var(--foreground);
+    border-color: var(--foreground);
+}
+
+.nextButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.subOption {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
